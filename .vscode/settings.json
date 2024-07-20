@@ -1,0 +1,5 @@
+{
+  "workbench.panel.defaultLocation": "right",
+  // https://github.com/microsoft/vscode/issues/158603
+  // "workbench.panel.size": 400
+}
