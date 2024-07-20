@@ -10,7 +10,7 @@ $ npm install
 $ npm start
 ```
 
-Now you can edit the files in the `scripts` folder and see the changes in the console everytime you save.
+Now you can create or modify Typescript and Javascript files (`*.ts`, `*.js`) in the `scripts` folder and see the console log changes in the Terminal everytime you save.
 
 ## TODO
 
