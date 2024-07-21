@@ -1,5 +1,9 @@
 {
-  "workbench.panel.defaultLocation": "right"
+  "workbench.panel.defaultLocation": "right",
   // https://github.com/microsoft/vscode/issues/158603
-  // "workbench.panel.size": 400
+  // "workbench.panel.size": 400,
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "**/node_modules": true
+  }
 }
