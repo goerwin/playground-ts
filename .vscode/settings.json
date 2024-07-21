@@ -3,6 +3,7 @@
   // https://github.com/microsoft/vscode/issues/158603
   // "workbench.panel.size": 400,
   "search.useIgnoreFiles": false,
+  "supermaven.allowGitignore": true,
   "search.exclude": {
     "**/node_modules": true
   }
