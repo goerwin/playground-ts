@@ -1,5 +1,6 @@
 {
   "workbench.panel.defaultLocation": "right",
+  "workbench.panel.opensMaximized": "preserve",
   // https://github.com/microsoft/vscode/issues/158603
   // "workbench.panel.size": 400,
   "search.useIgnoreFiles": false,
