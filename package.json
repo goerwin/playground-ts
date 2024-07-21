@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "start": "tsx ./index.ts",
-    "erwin": "tsx scripts/eee.ts"
+    "dev": "tsx --watch ./index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.14.11"
