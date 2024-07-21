@@ -4,8 +4,15 @@
   // "workbench.panel.size": 400,
   "search.useIgnoreFiles": false,
   "supermaven.allowGitignore": true,
+
   "search.exclude": {
-    "**/node_modules": true
+    "*.json": true,
+    "*.ts": true,
+    "*.md": true,
+    ".*": true,
+    "helpers/**": true,
+    "polyfills/**": true,
+    ".vscode/**": true
   },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#fcbf2c",
