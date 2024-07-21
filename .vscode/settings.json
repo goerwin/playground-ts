@@ -6,5 +6,25 @@
   "supermaven.allowGitignore": true,
   "search.exclude": {
     "**/node_modules": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#fcbf2c",
+    "activityBar.background": "#fcbf2c",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#029d70",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#fcbf2c",
+    "statusBar.background": "#f2ac03",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#c08802",
+    "statusBarItem.remoteBackground": "#f2ac03",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#f2ac03",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#f2ac0399",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#f2ac03"
 }
