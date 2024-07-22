@@ -1,6 +1,10 @@
 import chokidar from 'chokidar';
 import chalk from 'chalk';
 import { execSync } from 'node:child_process';
+import path from 'node:path';
+
+const tsxExecPath = path.resolve(__dirname, 'node_modules/.bin/tsx');
+const watchedFilePaths = path.resolve(__dirname, 'scripts/*.{ts,js}');
 
 function clearConsole() {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
@@ -72,10 +76,7 @@ printNodeVersion();
 console.log(new Date());
 console.log('Watching for changes...');
 
-// todo: handle race conditions if a file is running and another one has to run
-// keep a reference and discard result accordingly?
-
-chokidar.watch('./scripts/*.{ts,js}').on('change', (path) => {
+chokidar.watch(watchedFilePaths).on('change', (path) => {
   clearConsole();
 
   console.log(chalk.dim(`Node ${process.version}`));
@@ -83,14 +84,11 @@ chokidar.watch('./scripts/*.{ts,js}').on('change', (path) => {
   console.log(chalk.dim(path));
   console.log();
 
-  // print this good in script files
-  // console.log('first script yaaa\nsdfs\nadf');
-
   try {
-    const result = execSync(`tsx --import ./polyfills/console.ts ${path}`, {
-      encoding: 'utf-8',
-      stdio: 'pipe',
-    });
+    const result = execSync(
+      `${tsxExecPath} --import ./polyfills/index.ts ${path}`,
+      { encoding: 'utf-8', stdio: 'pipe' }
+    );
 
     console.log(result);
   } catch (e) {

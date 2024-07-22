@@ -1,5 +1,7 @@
 {
-  "type": "module",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "start": "tsx ./index.ts",
     "dev": "tsx --watch ./index.ts"
