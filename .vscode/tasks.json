@@ -5,28 +5,29 @@
       "type": "npm",
       "script": "start",
       "label": "Start playground",
+      "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "close": false,
         "showReuseMessage": false
-      },
-      "problemMatcher": []
+      }
     },
     {
       "type": "npm",
       "script": "create-random-script",
       "label": "Create random script",
+      "problemMatcher": [],
       "presentation": {
         "reveal": "silent",
         "close": true,
         "showReuseMessage": false
-      },
-      "problemMatcher": []
+      }
     },
     {
       "type": "npm",
       "script": "remove-all-scripts",
       "label": "Remove all scripts",
+      "problemMatcher": [],
       "presentation": {
         "reveal": "silent",
         "close": true,
