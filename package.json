@@ -4,7 +4,9 @@
   },
   "scripts": {
     "start": "tsx ./index.ts",
-    "dev": "tsx --watch ./index.ts"
+    "dev": "tsx --watch ./index.ts",
+    "create-random-script": "code $(tsx ./execs/create-random-script.ts)",
+    "remove-all-scripts": "tsx ./execs/remove-all-scripts.ts"
   },
   "devDependencies": {
     "@types/node": "^20.14.11"

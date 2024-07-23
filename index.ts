@@ -76,17 +76,17 @@ printNodeVersion();
 console.log(new Date());
 console.log('Watching for changes...');
 
-chokidar.watch(watchedFilePaths).on('change', (path) => {
+chokidar.watch(watchedFilePaths).on('change', (filePath) => {
   clearConsole();
 
   console.log(chalk.dim(`Node ${process.version}`));
   console.log(new Date());
-  console.log(chalk.dim(path));
+  console.log(chalk.dim(filePath.split(path.sep).at(-1)));
   console.log();
 
   try {
     const result = execSync(
-      `${tsxExecPath} --import ./polyfills/index.ts ${path}`,
+      `${tsxExecPath} --import ./polyfills/index.ts ${filePath}`,
       { encoding: 'utf-8', stdio: 'pipe' }
     );
 
