@@ -9,13 +9,10 @@
   "search.quickOpen.includeHistory": false,
   "search.useIgnoreFiles": false,
   "search.exclude": {
-    // "*.json": true,
-    // "*.ts": true,
-    // "*.md": true,
-    // ".*": true,
-    // "helpers/**": true,
-    // "polyfills/**": true,
-    // ".vscode/**": true
+    "execs/**": true,
+    "helpers/**": true,
+    "polyfills/**": true,
+    ".vscode/**": true
   },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#f5a73f",
