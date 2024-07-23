@@ -3,7 +3,7 @@ import { promises as fs } from 'node:fs';
 import { randomBytes } from 'node:crypto';
 
 function generateRandomFilename(sufix: string): string {
-  const hash = randomBytes(8).toString('hex');
+  const hash = randomBytes(2).toString('hex');
   const filename = `${sufix}${hash}.ts`;
   return filename;
 }
@@ -11,7 +11,12 @@ function generateRandomFilename(sufix: string): string {
 async function createRandomScriptFile() {
   const scriptsDir = path.join(__dirname, '../scripts');
   const filePath = path.join(scriptsDir, generateRandomFilename('sc-'));
+  const fileStats = await fs.stat(filePath).catch(() => null);
+
+  if (fileStats) return createRandomScriptFile();
+
   await fs.writeFile(filePath, 'console.log("hello world");');
+
   return filePath;
 }
 
